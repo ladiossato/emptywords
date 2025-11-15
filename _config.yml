@@ -5,8 +5,8 @@ description: >-
   Movement inside the mind that most people never see.
   Patterns before thought. Inner machinery shaping choices.
 
-baseurl: ""
-url: "https://emptywords.com" # Update with your actual domain
+baseurl: "/emptywords"  # Change to "" once custom domain is active
+url: "https://empty-words.com"
 
 # Build settings
 markdown: kramdown
