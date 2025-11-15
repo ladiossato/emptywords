@@ -3,10 +3,12 @@ layout: default
 ---
 
 <div class="home">
-    {{ content }}
+    <div class="home-intro">
+        {{ content }}
+    </div>
     
     <div class="recent-writings">
-        <h2>Recent writings</h2>
+        <h2 class="section-title">Recent Writings</h2>
         {% assign sorted_writings = site.writings | sort: 'date' | reverse %}
         {% for writing in sorted_writings limit:5 %}
         <article class="writing-preview">

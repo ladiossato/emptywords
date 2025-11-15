@@ -5,20 +5,17 @@ description: >-
   Movement inside the mind that most people never see.
   Patterns before thought. Inner machinery shaping choices.
 
-baseurl: "/emptywords"  # Change to "" once custom domain is active
+baseurl: "/emptywords"
 url: "https://empty-words.com"
 
-# Build settings
 markdown: kramdown
 permalink: /writings/:title/
 
-# Collections
 collections:
   writings:
     output: true
     permalink: /writings/:title/
 
-# Defaults
 defaults:
   - scope:
       path: ""
@@ -26,7 +23,6 @@ defaults:
     values:
       layout: "writing"
 
-# Exclude from processing
 exclude:
   - README.md
   - Gemfile

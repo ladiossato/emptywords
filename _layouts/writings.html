@@ -14,9 +14,6 @@ layout: default
         <h2>
             <a href="{{ writing.url | relative_url }}">{{ writing.title }}</a>
         </h2>
-        {% if writing.excerpt %}
-        <p class="excerpt">{{ writing.excerpt | strip_html | truncate: 200 }}</p>
-        {% endif %}
     </article>
     {% endfor %}
 </div>
