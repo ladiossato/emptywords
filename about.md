@@ -3,7 +3,7 @@ layout: default
 title: About
 ---
 
-<div class="about">
+<div class="about" markdown="1">
 
 # About Empty Words
 

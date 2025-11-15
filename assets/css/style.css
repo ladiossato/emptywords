@@ -285,7 +285,7 @@ main {
 .writing-content p {
     font-size: 18px;
     line-height: 1.8;
-    margin-bottom: var(--space-md);
+    margin-bottom: var(--space-lg);
     color: var(--text-primary);
 }
 
@@ -456,6 +456,8 @@ footer {
     
     .writing-content p {
         font-size: 17px;
+        line-height: 1.8;
+        margin-bottom: var(--space-lg);
     }
     
     .writing-content p:first-child {
