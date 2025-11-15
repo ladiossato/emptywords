@@ -1,6 +1,6 @@
 /* ========================================
    EMPTY WORDS
-   Clean. Modern. Refined.
+   Centered. Refined. Intentional.
    ======================================== */
 
 /* Reset */
@@ -12,23 +12,24 @@
 
 /* Variables */
 :root {
-    --text-primary: #000000;
-    --text-secondary: #666666;
-    --text-tertiary: #999999;
+    --text-primary: #0a0a0a;
+    --text-secondary: #737373;
+    --text-tertiary: #a3a3a3;
     --background: #ffffff;
-    --border: #e8e8e8;
-    --hover: #f5f5f5;
+    --border: #e5e5e5;
+    --hover: #fafafa;
     
-    --font-sans: -apple-system, BlinkMacSystemFont, 'Inter', 'SF Pro Display', 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    --font-sans: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Inter', 'Segoe UI', Roboto, sans-serif;
     
-    --space-xs: 8px;
-    --space-sm: 16px;
-    --space-md: 32px;
-    --space-lg: 64px;
-    --space-xl: 96px;
-    --space-2xl: 128px;
+    --space-xs: 12px;
+    --space-sm: 24px;
+    --space-md: 48px;
+    --space-lg: 72px;
+    --space-xl: 120px;
+    --space-2xl: 180px;
     
-    --max-width: 720px;
+    --max-width: 680px;
+    --max-width-wide: 960px;
 }
 
 /* Base */
@@ -48,35 +49,33 @@ body {
 /* Typography */
 h1, h2, h3, h4, h5, h6 {
     font-weight: 600;
-    line-height: 1.2;
-    letter-spacing: -0.02em;
+    line-height: 1.1;
+    letter-spacing: -0.03em;
 }
 
 h1 {
-    font-size: 48px;
+    font-size: 64px;
     font-weight: 700;
-    margin-bottom: var(--space-md);
 }
 
 h2 {
-    font-size: 32px;
-    margin-bottom: var(--space-sm);
+    font-size: 40px;
+    font-weight: 600;
 }
 
 h3 {
-    font-size: 24px;
-    margin-bottom: var(--space-sm);
+    font-size: 28px;
+    font-weight: 600;
 }
 
 p {
-    margin-bottom: var(--space-sm);
     line-height: 1.7;
 }
 
 a {
     color: var(--text-primary);
     text-decoration: none;
-    transition: color 0.15s ease;
+    transition: all 0.2s ease;
 }
 
 a:hover {
@@ -90,21 +89,23 @@ header {
     position: sticky;
     top: 0;
     z-index: 100;
+    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.9);
 }
 
 nav {
-    max-width: var(--max-width);
+    max-width: var(--max-width-wide);
     margin: 0 auto;
-    padding: var(--space-md) var(--space-md);
+    padding: var(--space-sm) var(--space-md);
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
 .site-title {
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 600;
-    letter-spacing: -0.01em;
+    letter-spacing: -0.02em;
 }
 
 .nav-links {
@@ -124,71 +125,88 @@ nav {
 
 /* Main */
 main {
-    max-width: var(--max-width);
+    max-width: var(--max-width-wide);
     margin: 0 auto;
-    padding: var(--space-2xl) var(--space-md);
+    padding: 0 var(--space-md);
     min-height: calc(100vh - 200px);
 }
 
 /* Home Page */
 .home {
-    padding-top: var(--space-lg);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: var(--space-2xl);
 }
 
 .home-intro {
+    text-align: center;
+    max-width: var(--max-width);
     margin-bottom: var(--space-2xl);
 }
 
 .home-intro h1 {
-    font-size: 56px;
+    font-size: 72px;
     font-weight: 700;
-    line-height: 1.1;
+    line-height: 1.05;
     margin-bottom: var(--space-md);
-    letter-spacing: -0.03em;
+    letter-spacing: -0.04em;
 }
 
 .home-intro p {
-    font-size: 20px;
+    font-size: 21px;
     line-height: 1.6;
     color: var(--text-secondary);
-    max-width: 600px;
+    margin-bottom: var(--space-sm);
+}
+
+.home-intro p:last-child {
+    font-size: 19px;
+}
+
+.recent-writings {
+    width: 100%;
+    max-width: var(--max-width);
+    margin-top: var(--space-xl);
 }
 
 .section-title {
-    font-size: 14px;
+    font-size: 13px;
     font-weight: 600;
     text-transform: uppercase;
-    letter-spacing: 0.05em;
+    letter-spacing: 0.08em;
     color: var(--text-tertiary);
-    margin-bottom: var(--space-md);
+    margin-bottom: var(--space-lg);
+    text-align: center;
 }
 
 .writing-preview {
-    padding: var(--space-lg) 0;
+    padding: var(--space-md) 0;
     border-top: 1px solid var(--border);
-    transition: background 0.15s ease;
+    text-align: center;
+    transition: all 0.2s ease;
 }
 
 .writing-preview:hover {
-    background: var(--hover);
-    margin: 0 calc(var(--space-md) * -1);
-    padding-left: var(--space-md);
-    padding-right: var(--space-md);
+    transform: translateY(-2px);
 }
 
 .writing-preview time {
     display: block;
-    font-size: 14px;
+    font-size: 13px;
     color: var(--text-tertiary);
-    margin-bottom: var(--space-xs);
+    margin-bottom: var(--space-sm);
     font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
 }
 
 .writing-preview h3 {
-    font-size: 28px;
+    font-size: 32px;
     font-weight: 600;
     margin: 0;
-    letter-spacing: -0.02em;
+    letter-spacing: -0.03em;
+    line-height: 1.2;
 }
 
 .writing-preview h3 a {
@@ -201,6 +219,8 @@ main {
     font-size: 15px;
     font-weight: 500;
     color: var(--text-secondary);
+    text-align: center;
+    width: 100%;
 }
 
 .view-all:hover {
@@ -209,39 +229,44 @@ main {
 
 /* Writings Archive */
 .writings-archive {
-    padding-top: var(--space-lg);
+    padding-top: var(--space-2xl);
+    max-width: var(--max-width);
+    margin: 0 auto;
 }
 
 .writings-archive h1 {
+    text-align: center;
     margin-bottom: var(--space-2xl);
+    font-size: 64px;
 }
 
 .writing-item {
-    padding: var(--space-lg) 0;
+    padding: var(--space-md) 0;
     border-top: 1px solid var(--border);
-    transition: background 0.15s ease;
+    text-align: center;
+    transition: all 0.2s ease;
 }
 
 .writing-item:hover {
-    background: var(--hover);
-    margin: 0 calc(var(--space-md) * -1);
-    padding-left: var(--space-md);
-    padding-right: var(--space-md);
+    transform: translateY(-2px);
 }
 
 .writing-item time {
     display: block;
-    font-size: 14px;
+    font-size: 13px;
     color: var(--text-tertiary);
-    margin-bottom: var(--space-xs);
+    margin-bottom: var(--space-sm);
     font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
 }
 
 .writing-item h2 {
-    font-size: 32px;
+    font-size: 36px;
     font-weight: 600;
     margin: 0;
-    letter-spacing: -0.02em;
+    letter-spacing: -0.03em;
+    line-height: 1.2;
 }
 
 .writing-item h2 a {
@@ -250,40 +275,41 @@ main {
 
 /* Individual Writing */
 .writing {
-    padding-top: var(--space-xl);
+    padding-top: var(--space-2xl);
+    max-width: var(--max-width);
+    margin: 0 auto;
 }
 
 .writing-header {
-    margin-bottom: var(--space-xl);
+    margin-bottom: var(--space-2xl);
     text-align: center;
 }
 
 .writing-header time {
     display: block;
-    font-size: 14px;
+    font-size: 13px;
     color: var(--text-tertiary);
     margin-bottom: var(--space-md);
     font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
 }
 
 .writing-header h1 {
-    font-size: 52px;
+    font-size: 64px;
     font-weight: 700;
-    line-height: 1.1;
-    letter-spacing: -0.03em;
-    margin-bottom: 0;
-    max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
+    line-height: 1.05;
+    letter-spacing: -0.04em;
+    margin: 0;
 }
 
 .writing-content {
-    max-width: 640px;
+    max-width: 580px;
     margin: 0 auto var(--space-2xl);
 }
 
 .writing-content p {
-    font-size: 18px;
+    font-size: 19px;
     line-height: 1.8;
     margin-bottom: var(--space-lg);
     color: var(--text-primary);
@@ -292,12 +318,14 @@ main {
 .writing-content p:first-child {
     font-size: 21px;
     color: var(--text-secondary);
+    margin-bottom: var(--space-xl);
 }
 
 .writing-footer {
     padding-top: var(--space-xl);
     border-top: 1px solid var(--border);
     text-align: center;
+    margin-top: var(--space-2xl);
 }
 
 .writing-footer a {
@@ -312,31 +340,38 @@ main {
 
 /* About Page */
 .about {
-    padding-top: var(--space-xl);
-    max-width: 640px;
+    padding-top: var(--space-2xl);
+    max-width: 580px;
     margin: 0 auto;
 }
 
 .about h1 {
-    margin-bottom: var(--space-lg);
+    margin-bottom: var(--space-xl);
+    text-align: center;
+    font-size: 64px;
 }
 
 .about h2 {
     margin-top: var(--space-2xl);
-    margin-bottom: var(--space-md);
-    font-size: 28px;
+    margin-bottom: var(--space-lg);
+    font-size: 32px;
+    text-align: center;
 }
 
 .about p {
-    font-size: 18px;
+    font-size: 19px;
     line-height: 1.8;
-    margin-bottom: var(--space-md);
+    margin-bottom: var(--space-lg);
 }
 
 .about hr {
     border: none;
     border-top: 1px solid var(--border);
     margin: var(--space-2xl) 0;
+}
+
+.about a {
+    font-weight: 500;
 }
 
 /* Footer */
@@ -362,28 +397,31 @@ footer {
 
 .subscribe-link {
     display: inline-block;
-    padding: 14px 28px;
+    padding: 16px 32px;
     background: var(--text-primary);
     color: var(--background);
     font-size: 15px;
     font-weight: 600;
-    border-radius: 8px;
-    transition: opacity 0.15s ease;
-    margin: var(--space-sm) 0;
+    border-radius: 6px;
+    transition: all 0.2s ease;
+    margin: var(--space-md) 0;
 }
 
 .subscribe-link:hover {
-    opacity: 0.85;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
     color: var(--background);
 }
 
 .footer-note {
     font-size: 14px;
     color: var(--text-tertiary);
+    margin-top: var(--space-sm);
 }
 
 .footer-note a {
     color: var(--text-secondary);
+    font-weight: 500;
 }
 
 .footer-note a:hover {
@@ -393,9 +431,10 @@ footer {
 /* Responsive */
 @media (max-width: 768px) {
     :root {
+        --space-md: 32px;
         --space-lg: 48px;
-        --space-xl: 64px;
-        --space-2xl: 80px;
+        --space-xl: 72px;
+        --space-2xl: 96px;
     }
     
     body {
@@ -403,15 +442,15 @@ footer {
     }
     
     h1 {
-        font-size: 36px;
+        font-size: 48px;
     }
     
     h2 {
-        font-size: 28px;
+        font-size: 32px;
     }
     
     h3 {
-        font-size: 22px;
+        font-size: 24px;
     }
     
     nav {
@@ -419,7 +458,7 @@ footer {
     }
     
     .site-title {
-        font-size: 18px;
+        font-size: 17px;
     }
     
     .nav-links {
@@ -431,27 +470,35 @@ footer {
     }
     
     main {
-        padding: var(--space-xl) var(--space-sm);
+        padding: 0 var(--space-sm);
+    }
+    
+    .home {
+        padding-top: var(--space-xl);
     }
     
     .home-intro h1 {
-        font-size: 40px;
+        font-size: 48px;
     }
     
     .home-intro p {
         font-size: 18px;
     }
     
-    .writing-preview h3 {
-        font-size: 24px;
+    .home-intro p:last-child {
+        font-size: 17px;
     }
     
-    .writing-item h2 {
+    .writing-preview h3 {
         font-size: 26px;
     }
     
+    .writing-item h2 {
+        font-size: 28px;
+    }
+    
     .writing-header h1 {
-        font-size: 36px;
+        font-size: 42px;
     }
     
     .writing-content p {
@@ -464,18 +511,34 @@ footer {
         font-size: 19px;
     }
     
+    .about h1 {
+        font-size: 48px;
+    }
+    
+    .about h2 {
+        font-size: 28px;
+    }
+    
     .about p {
         font-size: 17px;
+    }
+    
+    .writings-archive h1 {
+        font-size: 48px;
     }
 }
 
 @media (prefers-color-scheme: dark) {
     :root {
-        --text-primary: #ffffff;
-        --text-secondary: #a0a0a0;
-        --text-tertiary: #707070;
-        --background: #000000;
+        --text-primary: #fafafa;
+        --text-secondary: #a3a3a3;
+        --text-tertiary: #737373;
+        --background: #0a0a0a;
         --border: #1a1a1a;
-        --hover: #0a0a0a;
+        --hover: #141414;
+    }
+    
+    header {
+        background: rgba(10, 10, 10, 0.9);
     }
 }
