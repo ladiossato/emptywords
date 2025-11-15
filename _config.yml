@@ -1,0 +1,33 @@
+title: Empty Words
+author: Ladios Satō
+email: ladiossato@gmail.com
+description: >-
+  Movement inside the mind that most people never see.
+  Patterns before thought. Inner machinery shaping choices.
+
+baseurl: ""
+url: "https://emptywords.com" # Update with your actual domain
+
+# Build settings
+markdown: kramdown
+permalink: /writings/:title/
+
+# Collections
+collections:
+  writings:
+    output: true
+    permalink: /writings/:title/
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: "writings"
+    values:
+      layout: "writing"
+
+# Exclude from processing
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock

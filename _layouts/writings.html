@@ -1,0 +1,22 @@
+---
+layout: default
+---
+
+<div class="writings-archive">
+    <h1>{{ page.title }}</h1>
+    
+    {% assign sorted_writings = site.writings | sort: 'date' | reverse %}
+    {% for writing in sorted_writings %}
+    <article class="writing-item">
+        <time datetime="{{ writing.date | date_to_xmlschema }}">
+            {{ writing.date | date: "%B %d, %Y" }}
+        </time>
+        <h2>
+            <a href="{{ writing.url | relative_url }}">{{ writing.title }}</a>
+        </h2>
+        {% if writing.excerpt %}
+        <p class="excerpt">{{ writing.excerpt | strip_html | truncate: 200 }}</p>
+        {% endif %}
+    </article>
+    {% endfor %}
+</div>

@@ -1,0 +1,24 @@
+---
+layout: default
+---
+
+<div class="home">
+    {{ content }}
+    
+    <div class="recent-writings">
+        <h2>Recent writings</h2>
+        {% assign sorted_writings = site.writings | sort: 'date' | reverse %}
+        {% for writing in sorted_writings limit:5 %}
+        <article class="writing-preview">
+            <time datetime="{{ writing.date | date_to_xmlschema }}">
+                {{ writing.date | date: "%B %d, %Y" }}
+            </time>
+            <h3>
+                <a href="{{ writing.url | relative_url }}">{{ writing.title }}</a>
+            </h3>
+        </article>
+        {% endfor %}
+        
+        <a href="{{ '/writings' | relative_url }}" class="view-all">View all writings →</a>
+    </div>
+</div>
